@@ -12,10 +12,10 @@ import java.util.List;
 public class Business {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+   // private Long id;
 
-    private String name;
-    private String email;
+   // private String name;
+   // private String email;
 
     // Other business-related properties
 
