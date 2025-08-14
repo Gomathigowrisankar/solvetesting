@@ -1,0 +1,108 @@
+### Register as Business 
+POST https://solvecompiler.lntedutech.com/project/4690/proxy/3000/api/register
+Content-Type: application/json
+
+{
+   "username":"Nikhil",
+   "password":"123456789",
+   "role":"BUSINESS",
+   "email":"Nikhil@gmail.com"
+}
+### Register as Customer
+POST https://solvecompiler.lntedutech.com/project/4690/proxy/3000/api/register
+Content-Type: application/json
+
+{
+   "username":"Newcustomer",
+   "password":"123456789",
+   "role":"CUSTOMER",
+   "email":"CUSTOMER@gmail.com"
+}
+### Register as Driver
+POST https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/register
+Content-Type: application/json
+
+{
+   "username":"Newdriver",
+   "password":"123456789",
+   "role":"DRIVER",
+   "email":"DRIVERR@gmail.com"
+}
+### Login User-Business
+POST https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/login
+Content-Type: application/json
+
+{
+  "username": "Nikhil",
+  "password": "123456789"
+}
+
+### Post Mapping (Add Cargo) By Business
+
+### Add new cargo (JWT Token required)
+POST https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/business/cargo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOaWtoaWwiLCJyb2xlIjoiQlVTSU5FU1MiLCJpYXQiOjE3NTM4NjM3MDcsImV4cCI6MTc1Mzk1MDEwN30.4rzGzoTh9cJotojBjmf6i0qgE06XdH-1a8VJcQg80Y7-9OwD0-RhHR9HnCw0JdOd-YfQbjzM49eM_qBMEPZPxg
+
+{
+    "content":"Mob",
+    "size":"Medium 12'inch",
+    "status":"DELIVERED",
+    "business":{
+        "id":1,
+        "name": "Nikhil",
+        "email": "new@gmail.com"
+    },
+    "driver":{
+        "id":1,
+        "name": "sankar",
+        "email": "sh@gmail.com"
+    }
+}
+
+###Assign cargo to driver
+POST https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/business/assign-cargo?cargoId=1&driverId=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOaWtoaWwiLCJyb2xlIjoiQlVTSU5FU1MiLCJpYXQiOjE3NTM4NjM3MDcsImV4cCI6MTc1Mzk1MDEwN30.4rzGzoTh9cJotojBjmf6i0qgE06XdH-1a8VJcQg80Y7-9OwD0-RhHR9HnCw0JdOd-YfQbjzM49eM_qBMEPZPxg
+
+### Get Cargo details
+GET  https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/business/cargo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOaWtoaWwiLCJyb2xlIjoiQlVTSU5FU1MiLCJpYXQiOjE3NTM4NjM3MDcsImV4cCI6MTc1Mzk1MDEwN30.4rzGzoTh9cJotojBjmf6i0qgE06XdH-1a8VJcQg80Y7-9OwD0-RhHR9HnCw0JdOd-YfQbjzM49eM_qBMEPZPxg
+
+### Get Driver Details
+GET https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/business/drivers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOaWtoaWwiLCJyb2xlIjoiQlVTSU5FU1MiLCJpYXQiOjE3NTM4NjM3MDcsImV4cCI6MTc1Mzk1MDEwN30.4rzGzoTh9cJotojBjmf6i0qgE06XdH-1a8VJcQg80Y7-9OwD0-RhHR9HnCw0JdOd-YfQbjzM49eM_qBMEPZPxg
+#------------------------------------------------------
+### Login By Customer
+POST https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/login
+Content-Type: application/json
+
+{
+  "username": "Newcustomer",
+  "password": "123456789"
+}
+###Get Mapping (Cargo Status ) By Customer
+GET  https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/customer/cargo-status?cargoId=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOZXdjdXN0b21lciIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc1Mzg2MzkyMSwiZXhwIjoxNzUzOTUwMzIxfQ.AmoNcmTdpY_OhgdcL3ATdK6Udy_7ymGejg6s9WHNyNrdsUrxsKpKboYaBoWPSFOC8bNKLLQNb7_bAbn5cLa46A
+
+### Login User by Driver
+POST https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/login
+Content-Type: application/json
+
+{
+  "username": "Newdriver",
+  "password": "123456789"
+}
+
+###Get Mapping: Cargo Assign to Driver(Get Mapping) By Driver
+GET  https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/driver/cargo?driverId=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOZXdkcml2ZXIiLCJyb2xlIjoiRFJJVkVSIiwiaWF0IjoxNzUzODY1MTc1LCJleHAiOjE3NTM5NTE1NzV9.OpfqhYwiZ8MbxfJi-ENy5ls6Xws3U5vGONwGclnnTOAbv65bdmZYt-JLHIU0YDKm7mFniuEarABCnMHqNN1alQ
+
+###Put Mapping:( Update Cargo Status) By Driver
+PUT  https://solvecompiler.lntedutech.com/project/8019/proxy/3000/api/driver/update-cargo-status?cargoId=1&newStatus=IN_TRANSIT
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOZXdkcml2ZXIiLCJyb2xlIjoiRFJJVkVSIiwiaWF0IjoxNzUzODY1MTc1LCJleHAiOjE3NTM5NTE1NzV9.OpfqhYwiZ8MbxfJi-ENy5ls6Xws3U5vGONwGclnnTOAbv65bdmZYt-JLHIU0YDKm7mFniuEarABCnMHqNN1alQ

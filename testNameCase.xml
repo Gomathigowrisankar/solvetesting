@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <property name="testRegisterBusiness"
+              value="Register a new business and validate user and business data persistence" />
+
+    <property name="testRegisterCustomer"
+              value="Register a new customer and validate user and customer data persistence" />
+
+    <property name="testRegisterDriver"
+              value="Register a new driver and validate user and driver data persistence" />
+
+    <property name="testLoginUser"
+              value="Login with a valid registered user and return authentication token" />
+
+    <property name="testLoginWithWrongUsernameOrPassword"
+              value="Attempt login with invalid credentials and expect unauthorized status" />
+
+    <property name="testViewCargoStatus"
+              value="Customer views cargo status by cargo ID and receives expected status" />
+
+    <property name="testUpdateCargoStatus"
+              value="Driver updates the cargo delivery status and changes are persisted" />
+
+    <property name="testViewAssignedCargos"
+              value="Driver retrieves list of assigned cargos with expected content and size" />
+
+    <property name="testViewAllCargos"
+              value="Business views all cargos and receives complete cargo list with details" />
+
+    <property name="testAssignCargoToDriver"
+              value="Business assigns cargo to driver and verifies assignment in database" />
+
+    <property name="testAddCargo"
+              value="Business adds a new cargo and receives confirmation with correct details" />
+
+    <property name="testPermissionForBusinessEndpoints"
+              value="Unauthenticated user denied access to all business-related endpoints" />
+
+    <property name="testPermissionForDriverEndpoints"
+              value="Unauthenticated user denied access to all driver-related endpoints" />
+
+    <property name="testPermissionForCustomerEndpoints"
+              value="Unauthenticated user denied access to all customer-related endpoints" />
+</properties>
